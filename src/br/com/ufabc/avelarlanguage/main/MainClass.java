@@ -1,5 +1,6 @@
 package br.com.ufabc.avelarlanguage.main;
 
+import br.com.ufabc.avelarlanguage.exceptions.AvlSemanticException;
 import br.com.ufabc.avelarlanguage.parser.AvelarlangLexer;
 import br.com.ufabc.avelarlanguage.parser.AvelarlangParser;
 import org.antlr.v4.runtime.CharStreams;
@@ -30,9 +31,12 @@ public class MainClass {
 
             System.out.println("Compilation Successful");
         }
+        catch(AvlSemanticException ex) {
+            System.err.println("Semantic error - " +ex.getMessage());
+        }
         catch(Exception ex) {
             ex.printStackTrace();
-            System.err.println("ERROR "+ex.getMessage());
+            System.err.println("ERROR " +ex.getMessage());
         }
     }
 }

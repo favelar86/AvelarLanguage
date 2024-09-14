@@ -1,9 +1,11 @@
 programa
 
+  numero a, b;
+
   leia(a);
   leia(b);
 
-  a = 1 + 2 * 3 / b;
+  a = 1.4 + 2;
 
   escreva (a);
   escreva (b);
