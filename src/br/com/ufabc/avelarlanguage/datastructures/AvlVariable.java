@@ -3,6 +3,7 @@ package br.com.ufabc.avelarlanguage.datastructures;
 public class AvlVariable extends AvlSymbol {
 
     public static final int NUMBER=0;
+    public static final int TEXT  =1;
     private int type;
     private String value;
 
@@ -26,6 +27,17 @@ public class AvlVariable extends AvlSymbol {
 
     public void setValue(String value) {
         this.value = value;
+    }
+
+    public String generateJavaCode() {
+        String str;
+        if (type == NUMBER) {
+            str = "double ";
+        }
+        else {
+            str = "String ";
+        }
+        return str + " "+super.name+";";
     }
 
     @Override

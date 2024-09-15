@@ -30,6 +30,10 @@ public class MainClass {
             parser.prog();
 
             System.out.println("Compilation Successful");
+
+            parser.exibeComandos();
+
+            parser.generateCode();
         }
         catch(AvlSemanticException ex) {
             System.err.println("Semantic error - " +ex.getMessage());

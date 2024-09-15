@@ -1,10 +1,10 @@
 package br.com.ufabc.avelarlanguage.datastructures;
 
-public class AvlSymbol {
+public abstract class AvlSymbol {
 
     protected String name;
 
-
+    public abstract String generateJavaCode();
     public AvlSymbol(String name) {
         this.name = name;
 
